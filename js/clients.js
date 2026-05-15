@@ -1,8 +1,8 @@
 import { clients, saveClients } from "./data.js";
 import { generateID, validateEmail, fetchClients } from "./utils.js";
 
-const clientsList = document.getElementById("clients-list");
-const clientForm = document.getElementById("client-form");
+const clientsList = document.getElementById("clientsList");
+const clientForm = document.getElementById("clientForm");
 
 clientForm.addEventListener("submit", (e) => {
   e.preventDefault();

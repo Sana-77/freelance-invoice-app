@@ -12,6 +12,7 @@ export async function fetchClients() {
 
     const data = await response.json();
 
+    console.log("Fetched clients:", data);
     return data.results.map((user) => ({
       id: Date.now() + Math.random(),
       name: `${user.name.first} ${user.name.last}`,
@@ -31,6 +32,7 @@ export async function fetchQuote() {
 
     const data = await response.json();
 
+    console.log("Fetched quote:", data);
     return data[0];
   } catch (error) {
     console.log(error);
