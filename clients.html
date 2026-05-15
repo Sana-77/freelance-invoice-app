@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clients</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav>
+      <h1>Clients Management</h1>
+
+      <ul>
+        <li><a href="index.html">Dashboard</a></li>
+        <li><a href="clients.html">Clients</a></li>
+        <li><a href="invoices.html">Invoices</a></li>
+      </ul>
+    </nav>
+
+    <section class="form-section">
+      <form id="clientForm">
+        <input type="text" id="name" placeholder="Client Name" required />
+
+        <input type="email" id="email" placeholder="Email" required />
+
+        <input type="text" id="company" placeholder="Company" />
+
+        <textarea id="notes" placeholder="Notes"></textarea>
+
+        <button type="submit">Add Client</button>
+      </form>
+    </section>
+
+    <section>
+      <div id="clientsList" class="clients-grid"></div>
+    </section>
+
+    <script type="module" src="js/clients.js"></script>
+  </body>
+</html>

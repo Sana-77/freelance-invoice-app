@@ -1,0 +1,65 @@
+* {
+  list-style: none;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.form-section {
+  padding: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+input,
+textarea,
+select {
+  padding: 10px;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  background: #222;
+  color: white;
+  cursor: pointer;
+}
+
+.clients-grid,
+.invoice-grid,
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card,
+.client-card,
+.invoice-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.quote-box {
+  padding: 20px;
+  text-align: center;
+}
+
+.paid {
+  color: green;
+}
+
+.unpaid {
+  color: red;
+}

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav>
+      <h1>Freelance Invoice App</h1>
+
+      <ul>
+        <li><a href="index.html">Dashboard</a></li>
+        <li><a href="clients.html">Clients</a></li>
+        <li><a href="invoices.html">Invoices</a></li>
+      </ul>
+    </nav>
+
+    <section class="dashboard">
+      <div class="card">
+        <h2>Total Clients</h2>
+        <p id="totalClients">0</p>
+      </div>
+
+      <div class="card">
+        <h2>Total Invoices</h2>
+        <p id="totalInvoices">0</p>
+      </div>
+
+      <div class="card">
+        <h2>Total Revenue</h2>
+        <p id="totalRevenue">$0</p>
+      </div>
+
+      <div class="card">
+        <h2>Paid Invoices</h2>
+        <p id="paidInvoices">0</p>
+      </div>
+
+      <div class="card">
+        <h2>Unpaid Invoices</h2>
+        <p id="unpaidInvoices">0</p>
+      </div>
+    </section>
+
+    <section class="quote-box">
+      <h2>Motivational Quote</h2>
+      <p id="quote"></p>
+      <h4 id="author"></h4>
+    </section>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
