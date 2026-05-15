@@ -1,55 +1,93 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <nav>
-      <h1>Freelance Invoice App</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav>
+    <h1>Freelance Invoice App</h1>
+
+    <ul>
+      <li><a href="index.html">Dashboard</a></li>
+      <li><a href="clients.html">Clients</a></li>
+      <li><a href="invoices.html">Invoices</a></li>
+    </ul>
+  </nav>
+
+  <section class="dashboard">
+    <div class="card">
+      <h2>Total Clients</h2>
+      <p id="totalClients">0</p>
+    </div>
+
+    <div class="card">
+      <h2>Total Invoices</h2>
+      <p id="totalInvoices">0</p>
+    </div>
+
+    <div class="card">
+      <h2>Total Revenue</h2>
+      <p id="totalRevenue">$0</p>
+    </div>
+
+    <div class="card">
+      <h2>Paid Invoices</h2>
+      <p id="paidInvoices">0</p>
+    </div>
+
+    <div class="card">
+      <h2>Unpaid Invoices</h2>
+      <p id="unpaidInvoices">0</p>
+    </div>
+  </section>
+
+  <section class="quote-box">
+    <h2>Motivational Quote</h2>
+    <p id="quote"></p>
+    <h4 id="author"></h4>
+  </section>
+
+  <script type="module" src="js/main.js"></script>
+  <footer class="footer">
+
+  <div class="footer-container">
+
+    <div class="footer-logo">
+      <h2>Freelance Invoice App</h2>
+      <p>
+        Manage your clients and invoices easily with a modern
+        professional dashboard.
+      </p>
+    </div>
+
+    <div class="footer-links">
+      <h3>Quick Links</h3>
 
       <ul>
         <li><a href="index.html">Dashboard</a></li>
         <li><a href="clients.html">Clients</a></li>
         <li><a href="invoices.html">Invoices</a></li>
       </ul>
-    </nav>
+    </div>
 
-    <section class="dashboard">
-      <div class="card">
-        <h2>Total Clients</h2>
-        <p id="totalClients">0</p>
-      </div>
+    <div class="footer-contact">
+      <h3>Contact</h3>
 
-      <div class="card">
-        <h2>Total Invoices</h2>
-        <p id="totalInvoices">0</p>
-      </div>
+      <p>Email: support@invoiceapp.com</p>
+      <p>Phone: +1 234 567 890</p>
+    </div>
 
-      <div class="card">
-        <h2>Total Revenue</h2>
-        <p id="totalRevenue">$0</p>
-      </div>
+  </div>
 
-      <div class="card">
-        <h2>Paid Invoices</h2>
-        <p id="paidInvoices">0</p>
-      </div>
+  <div class="footer-bottom">
+    <p>© 2026 Freelance Invoice App | All Rights Reserved</p>
+  </div>
 
-      <div class="card">
-        <h2>Unpaid Invoices</h2>
-        <p id="unpaidInvoices">0</p>
-      </div>
-    </section>
+</footer>
 
-    <section class="quote-box">
-      <h2>Motivational Quote</h2>
-      <p id="quote"></p>
-      <h4 id="author"></h4>
-    </section>
-
-    <script type="module" src="js/main.js"></script>
-  </body>
-</html>
+</body>
+</html
