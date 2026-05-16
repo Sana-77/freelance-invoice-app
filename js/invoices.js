@@ -45,6 +45,15 @@ invoiceForm.addEventListener("submit", function (e) {
   invoiceForm.reset();
 });
 
+window.togglePaid = function (id) {
+  const invoice = invoices.find((invoice) => invoice.id === id);
+
+  invoice.paid = !invoice.paid;
+
+  saveInvoices();
+  renderInvoices();
+};
+
 function renderInvoices() {
   invoiceList.innerHTML = "";
   invoices.forEach((invoice) => {
@@ -56,14 +65,19 @@ function renderInvoices() {
             <p>${invoice.description}</p>
             <p>$${invoice.amount}</p>
             <p>${invoice.date}</p>
-            <p>${invoice.paid ? "Paid" : "Unpaid"}</p>
-            <button onclick="togglePaid(${invoice.id})">
-                Mark as ${invoice.paid ? "Unpaid" : "Paid"}
-            </button>
-            <button onclick="deleteInvoice(${invoice.id})">
-                Delete
-            </button>
-        </div>
+
+          <div class="invoice-actions">
+
+          <button onclick="togglePaid(${invoice.id})">
+           ${invoice.paid ? "Mark Unpaid" : "Mark Paid"}
+          </button>
+
+          <button onclick="deleteInvoice(${invoice.id})">
+            Delete
+          </button>
+
+          </div>
+      </div>
         `;
   });
 }

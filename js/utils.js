@@ -11,6 +11,7 @@ export async function fetchClients() {
     const response = await fetch("https://randomuser.me/api/?results=5&nat=us");
 
     const data = await response.json();
+    console.log("Fetched clients:", data);
 
     return data.results.map((user) => ({
       id: Date.now() + Math.random(),
