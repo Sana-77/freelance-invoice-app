@@ -40,20 +40,56 @@ function renderClients() {
   clientsList.innerHTML = "";
 
   clients.forEach((client) => {
+    const firstLetter = client.name.charAt(0);
+
     clientsList.innerHTML += `
+
       <div class="client-card">
 
-        <h3>${client.name}</h3>
+        <div class="client-header">
 
-        <p>${client.email}</p>
+          <div class="client-avatar">
+            ${firstLetter}
+          </div>
 
-        <p>${client.company}</p>
+          <div class="client-info">
 
-        <p>${client.notes}</p>
+            <h3>${client.name}</h3>
 
-        <button onclick="deleteClient(${client.id})">
-          Delete
-        </button>
+            <p class="client-email">
+              ${client.email}
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="client-details">
+
+          <p>
+            <strong>Company:</strong>
+            ${client.company}
+          </p>
+
+          <p>
+            <strong>Phone:</strong>
+            ${client.phone}
+          </p>
+
+          <p>
+            <strong>Notes:</strong>
+            ${client.notes}
+          </p>
+
+        </div>
+
+        <div class="client-actions">
+
+          <button onclick="deleteClient(${client.id})">
+            Delete
+          </button>
+
+        </div>
 
       </div>
     `;

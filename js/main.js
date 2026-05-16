@@ -35,9 +35,9 @@ async function loadQuote() {
   const quoteData = await fetchQuote();
 
   if (quoteData) {
-    quote.textContent = quoteData.q;
+    quote.textContent = `"${quoteData.quote}"`;
 
-    author.textContent = quoteData.a || "Unknown";
+    author.textContent = `— ${quoteData.author}`;
   }
 }
 
